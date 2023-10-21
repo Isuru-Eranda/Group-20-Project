@@ -112,7 +112,7 @@ input[type=search]:not(:placeholder-shown){
     margin: 0.4rem 0;
 }
 .product-items{
-    margin-top: 5%;
+    margin-top: 1%;
 }
 
 /* product section */
@@ -131,15 +131,13 @@ input[type=search]:not(:placeholder-shown){
 }
 .product-content{
     background: var(--gray);
-    padding: 2px 0.5px 2px 0.px;
     cursor: pointer;
 }
 .product-img{
-
-    width: 200px;
-    height: 200px;
+    text-align: center;
+    width: 180px;
+    height: 150px;
     margin: 0 auto;
-    border-radius: 50%;
     transition: background 0.5s ease;
 }
 
