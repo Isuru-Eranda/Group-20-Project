@@ -229,6 +229,17 @@ input[type=search]:not(:placeholder-shown){
     left: -90px;
 }
 
+/*  form */
+.home #form {
+	position: absolute;
+	left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+	color: #FFFFFF;
+	z-index: 1;
+}
+
+
 
 /* cards */
 .col-md-3 .card img{
