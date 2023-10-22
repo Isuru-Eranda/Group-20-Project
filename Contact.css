@@ -249,22 +249,22 @@ input[type=search]:not(:placeholder-shown){
 	padding: 10px 0;
 }
 
-input,
-textarea,
-label {
+form input,
+form textarea,
+form label {
 	display: block;
 	margin: 0 auto;
 	width: 100%;
 }
 
-input,
-textarea {
+form input,
+form textarea {
 	background-color: transparent;
 	border: 0;
 	border-bottom:2px solid black;
 }
 
-input[type=submit] {
+form input[type=submit] {
 	background-color: grey;
 	padding: 15px 0;
 	color: white;
@@ -275,19 +275,19 @@ input[type=submit] {
 	transition: all .3s ease;
 }
 
-input[type=submit]:hover {
+form input[type=submit]:hover {
 	background: #000;
 }
 
-input,
-textarea {
+form input,
+form textarea {
 	color: black;
 	font-size: 18px;
 	padding: 10px;
 }
 
-input:focus,
-textarea:focus {
+form input:focus,
+form textarea:focus {
 	outline: none;
 }
 
