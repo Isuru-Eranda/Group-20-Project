@@ -50,17 +50,34 @@
       <div class="carousel-item" style="background-image: url(image/1.jpeg);"> </div>
     </div>
   </div>
-  <div class="container" id="form"> 
-	  <div class=row>
-		  <div class="col-md-6">Section 1 - Form</div>
-		  <div class="col-md-6">
-		  <div class="col-md-12">Section 2 - Contacts</div>
-		  <div class="col-md-12">Section 3 - Map</div>
-		  </div>
-	  </div>
-	</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6" id="left">
+        <h1>Get in touch!</h1>
+        <form action="Contact.php" method="POST">
+          <label for="name">Name:</label>
+          <input type="text" name="name" id="name">
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email">
+          <label for="subject">Subject:</label>
+          <input type="text" name="subject" id="subject">
+          <label for="message">Message:</label>
+          <textarea name="message" cols="10" rows="5"></textarea>
+          <input type="submit" name="submit" value="Send">
+        </form>
+      </div>
+      <div class="col-md-6" id="right">
+        <h2>Call Us</h2>
+        <p>+94 432 4322<br>
+          +94 432 3245</p>
+        <h2>Address</h2>
+        <p>121 Rock Sreet, 21 Avenue, <br>
+          New York, NY 92103-9000</p>
+		  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15846.303361252902!2d80.0415729!3d6.8213291!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2523b05555555%3A0x546c34cd99f6f488!2sNSBM%20Green%20University!5e0!3m2!1sen!2slk!4v1697967540142!5m2!1sen!2slk" width="650" height="333" style="border:2px solid black;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
 </section>
-	
 <script src="Contact.js"></script>
 </body>
 </html>

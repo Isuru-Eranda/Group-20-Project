@@ -230,7 +230,7 @@ input[type=search]:not(:placeholder-shown){
 }
 
 /*  form */
-.home #form {
+.home .container {
 	position: absolute;
 	left: 50%;
     top: 50%;
@@ -239,7 +239,57 @@ input[type=search]:not(:placeholder-shown){
 	z-index: 1;
 }
 
+.home .container .row {
+	margin-top: 150px;
+	background: rgba(255,255,255,0.9);
+	color: black;
+}
 
+.home .container .row #left form {
+	padding: 10px 0;
+}
+
+input,
+textarea,
+label {
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+}
+
+input,
+textarea {
+	background-color: transparent;
+	border: 0;
+	border-bottom:2px solid black;
+}
+
+input[type=submit] {
+	background-color: grey;
+	padding: 15px 0;
+	color: white;
+	font-size: 18px;
+	border-bottom: none;
+	margin-top: 30px;
+	cursor: pointer;
+	transition: all .3s ease;
+}
+
+input[type=submit]:hover {
+	background: #000;
+}
+
+input,
+textarea {
+	color: black;
+	font-size: 18px;
+	padding: 10px;
+}
+
+input:focus,
+textarea:focus {
+	outline: none;
+}
 
 /* cards */
 .col-md-3 .card img{
@@ -296,7 +346,6 @@ input[type=search]:not(:placeholder-shown){
 .footerbg{
     background-color: #222831;
 }
-
 
 
 /* responsive */
