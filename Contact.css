@@ -291,6 +291,11 @@ textarea:focus {
 	outline: none;
 }
 
+.row #right iframe {
+	width: 100%;
+}
+
+
 /* cards */
 .col-md-3 .card img{
     border-radius: 20px;
@@ -346,6 +351,7 @@ textarea:focus {
 .footerbg{
     background-color: #222831;
 }
+
 
 
 /* responsive */
