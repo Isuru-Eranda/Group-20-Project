@@ -41,28 +41,29 @@
 </nav>
 
 <!-- Carousel -->
-
+<!--Form-->
 <section class="home">
-  <div id="carouselExampleIndicators" class="carousel slide">
-    <div class="carousel-inner">
-      <div class="carousel-item active" style="background-image: url(image/1.jpg);"> </div>
-      <div class="carousel-item" style="background-image: url(image/7.jpeg);"> </div>
-      <div class="carousel-item" style="background-image: url(image/1.jpeg);"> </div>
-    </div>
-  </div>
   <div class="container">
     <div class="row">
       <div class="col-md-6" id="left">
         <h1>Get in touch!</h1>
         <form action="Contact.php" method="POST">
-          <label for="name">Name:</label>
-          <input type="text" name="name" id="name">
-          <label for="email">Email:</label>
-          <input type="email" name="email" id="email">
-          <label for="subject">Subject:</label>
-          <input type="text" name="subject" id="subject">
-          <label for="message">Message:</label>
-          <textarea name="message" cols="10" rows="5"></textarea>
+          <div class="input-field">
+            <input type="text" name="name" id="name" required="required">
+            <label for="name">Name</label>
+          </div>
+          <div class="input-field">
+            <input type="email" name="email" id="email" required="required">
+            <label for="email">Email</label>
+          </div>
+          <div class="input-field">
+            <input type="text" name="subject" id="subject" required="required">
+            <label for="subject">Subject</label>
+          </div>
+          <div class="input-field">
+            <textarea name="message" cols="10" rows="5" required="required"></textarea>
+            <label for="message">Message</label>
+          </div>
           <input type="submit" name="submit" value="Send">
         </form>
       </div>
@@ -73,7 +74,7 @@
         <h2>Address</h2>
         <p>121 Rock Sreet, 21 Avenue, <br>
           New York, NY 92103-9000</p>
-		  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15846.303361252902!2d80.0415729!3d6.8213291!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2523b05555555%3A0x546c34cd99f6f488!2sNSBM%20Green%20University!5e0!3m2!1sen!2slk!4v1697967540142!5m2!1sen!2slk" width="650" height="333" style="border:2px solid black;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15846.303361252902!2d80.0415729!3d6.8213291!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2523b05555555%3A0x546c34cd99f6f488!2sNSBM%20Green%20University!5e0!3m2!1sen!2slk!4v1697967540142!5m2!1sen!2slk" width="650" height="338rem" style="border:1px solid rgba(34, 40, 49, 0.35);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </div>

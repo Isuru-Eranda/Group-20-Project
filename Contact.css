@@ -233,55 +233,60 @@ input[type=search]:not(:placeholder-shown){
 .home .container {
 	position: absolute;
 	left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    transform: translateX(-50%);
 	color: #FFFFFF;
 	z-index: 1;
 }
 
 .home .container .row {
 	margin-top: 150px;
-	background: rgba(255,255,255,0.9);
-	color: black;
+	background: rgba(34, 40, 49,0.99);
+	color: #f9f4f4;
+	padding: 20px;
+	text-transform: uppercase;
+    border-radius: 5px;
+    box-shadow:
+  0px 0.9px 4.6px rgba(0, 0, 0, 0.105),
+  0px 2.5px 12.8px rgba(0, 0, 0, 0.15),
+  0px 6px 30.8px rgba(0, 0, 0, 0.195),
+  0px 20px 102px rgba(0, 0, 0, 0.3)
+;
 }
 
 .home .container .row #left form {
 	padding: 10px 0;
 }
 
+.home .container .row h1,
+.home .container .row h2{
+	font-weight: bold;
+}
+
+.home .container .row #right p {
+    text-transform: none;
+}
+/*
 form input,
 form textarea,
 form label {
-	display: block;
-	margin: 0 auto;
-	width: 100%;
+	
+}
+
+form label {
+	padding-top: 10px;
 }
 
 form input,
 form textarea {
 	background-color: transparent;
 	border: 0;
-	border-bottom:2px solid black;
-}
-
-form input[type=submit] {
-	background-color: grey;
-	padding: 15px 0;
-	color: white;
-	font-size: 18px;
-	border-bottom: none;
-	margin-top: 30px;
-	cursor: pointer;
-	transition: all .3s ease;
-}
-
-form input[type=submit]:hover {
-	background: #000;
+	border-bottom:2px solid #f9f4f4;
 }
 
 form input,
 form textarea {
-	color: black;
+	color: #FFF;
 	font-size: 18px;
 	padding: 10px;
 }
@@ -290,11 +295,113 @@ form input:focus,
 form textarea:focus {
 	outline: none;
 }
+*/
+
+form input[type=submit] {
+    display: block;
+	margin: 0 auto;
+	width: 100%;
+	text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.2rem;;
+	background-color: #222831;;
+	padding: 15px 0;
+	color: rgb(0, 173, 181);
+    border: 1px solid rgb(0, 173, 181);
+	font-size: 1rem;
+	margin-top: 30px;
+	cursor: pointer;
+    border-radius: 5px;
+	transition: all .5s ease;
+}
+
+form input[type=submit]:hover {
+	background: rgb(0, 173, 181);
+    color: #222831;
+}
+
+
 
 .row #right iframe {
 	width: 100%;
+	filter: invert();
+    border-radius: 5px;
 }
 
+
+.input-field {
+    position: relative;
+    width: 100%;
+    padding: 15px 0;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(238, 238, 238, 0.35);
+    background: #222831;
+    border-radius: 5px;
+    outline: none;
+    color: #FFF;
+    font-size: 1rem;
+    transition: 0.5s;
+}
+
+.input-field label {
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 1rem;
+    color: rgba(238, 238, 238, 0.35);
+    transition: 0.5s;
+}
+
+.input-field input:valid ~ label,
+.input-field input:focus ~ label {
+    color: rgb(0, 173, 181);
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.65rem;
+    padding: 0 10px;
+    background : #222831;
+    border-left: 1px solid rgb(0, 173, 181);
+    border-right: 1px solid rgb(0, 173, 181);
+    letter-spacing: 0.2rem;
+}
+
+.input-field input:valid,
+.input-field input:focus {
+    border: 1px solid rgb(0, 173, 181);
+}  
+
+.input-field textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(238, 238, 238,0.35);
+    background: #222831;
+    border-radius: 5px;
+    outline: none;
+    color: #FFF;
+    font-size: 1rem;
+    transition: 0.5s;
+}
+
+.input-field textarea:valid ~ label,
+.input-field textarea:focus ~ label {
+    color: rgb(0, 173, 181);
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.65rem;
+    padding: 0 10px;
+    background : #222831;
+    border-left: 1px solid rgb(0, 173, 181);
+    border-right: 1px solid rgb(0, 173, 181);
+    letter-spacing: 0.2rem;
+}
+
+.input-field textarea:valid,
+.input-field textarea:focus {
+    border: 1px solid rgb(0, 173, 181);
+}  
 
 /* cards */
 .col-md-3 .card img{
