@@ -17,7 +17,6 @@ form.onsubmit = (e)=>{
                 statusTxt.style.color = "red";
             }else{
                 form.reset();
-                alert("hello");
                 setTimeout(()=>{
                     statusTxt.style.display = "none";
                 }, 3000);
