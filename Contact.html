@@ -44,27 +44,36 @@
 <!--Form-->
 <section class="home">
   <div class="container">
-    <div class="row">
+    <div class="row" id="main">
       <div class="col-md-6" id="left">
         <h1>Contact Us</h1>
         <form action="Contact.php" method="POST">
           <div class="input-field">
-            <input type="text" name="name" id="name" required="required">
+            <input type="text" name="name" id="name" placeholder=" ">
             <label for="name">Name</label>
           </div>
           <div class="input-field">
-            <input type="email" name="email" id="email" required="required">
+            <input type="text" name="email" id="email" placeholder=" ">
             <label for="email">Email</label>
           </div>
           <div class="input-field">
-            <input type="text" name="subject" id="subject" required="required">
+            <input type="text" name="subject" id="subject" placeholder=" ">
             <label for="subject">Subject</label>
           </div>
           <div class="input-field">
-            <textarea name="message" cols="10" rows="5" required="required"></textarea>
+            <textarea name="message" cols="10" rows="5" placeholder=" "></textarea>
             <label for="message">Message</label>
           </div>
-          <button type="submit" name="submit">Send</button>
+          <div class="button-area">
+            <div class="row">
+            <div class="col-lg-6">
+              <button type="submit" name="submit">Send</button>
+            </div>
+            <div class="col-lg-6">
+              <span>Sending your message...</span>
+            </div>
+          </div>
+          </div>
         </form>
       </div>
       <div class="col-md-6" id="right">
