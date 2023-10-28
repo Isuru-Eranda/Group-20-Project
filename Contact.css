@@ -389,22 +389,15 @@ form .button-area .col-lg-6 span {
 /* responsive */
 
 @media(max-width: 767px){
-    .home .carousel-control-next,
-    .home .carousel-control-prev{
-        display: none;
+    .home .container #main h1,
+    .home .container #main h3{
+        text-align: center;
     }
-
-    .home .carousel-indicators button{
-        height: 60px;
-        width: 60px;
+    .home .container #main #left form{
+	    padding: 10px 0 31px 0;
     }
-
-    .home .carousel-item h2{
-        font-size: 45px; 
-    }
-
-    .home .carousel-item p{
-        font-size: 22px;
+    .home .container #main #right p {
+        text-align: center;
     }
 }
     
