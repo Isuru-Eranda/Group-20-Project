@@ -4,6 +4,7 @@ statusTxt = form.querySelector(".button-area span");
 
 form.onsubmit = (e)=>{
     e.preventDefault();
+    statusTxt.innerText = "Sending your message...";
     statusTxt.style.color = "#f9f4f4";
     statusTxt.style.display = "block";
 
