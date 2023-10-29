@@ -291,13 +291,13 @@ form .button-area button:hover {
     color: #222831;
 }
 
-form .button-area .col-lg-6 {
+form .button-area .col-md-6 {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-form .button-area .col-lg-6 span {
+form .button-area .col-md-6 span {
     display: none;
 	text-transform: none;
 	font-size: 1rem;
