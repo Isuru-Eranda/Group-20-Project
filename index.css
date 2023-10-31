@@ -74,8 +74,13 @@ body{
     transition: all 200ms linear;
 }
 
+.dropdown-menu {
+    border-radius: 25px;
+}
+
 .dropdown-item{
     margin-top: 10px;
+    border-radius: 25px;
 }
 
 input[type=search]{
