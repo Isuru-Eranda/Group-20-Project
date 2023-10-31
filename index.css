@@ -256,10 +256,12 @@ input[type=search]:not(:placeholder-shown){
     transform: scale(1.01) translateZ(0);
   }
 
-.card-body .btn{
+  .card-body .btn{
     border-radius: 9px;
 }
-
+.col .card img{
+    border-radius: 20px;
+}
 .logos {
     display: flex;
   }
@@ -275,6 +277,7 @@ input[type=search]:not(:placeholder-shown){
 .col .card .img{
     border-radius: 20px;
 }
+
 
 
 /* footer */
