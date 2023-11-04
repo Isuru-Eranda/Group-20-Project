@@ -257,7 +257,7 @@ footer {
     background-color: #222831;
     color: #FFF;
     text-align: center;
-    padding: 20px 0;
+    padding-bottom: 14px;
 }
 footer .main {
     display: flex;
@@ -267,8 +267,9 @@ footer .main > div{
     width: 30%;
 }
 footer .item.heading{
-    padding: 10px 0;
+    padding: 30px 0 10px 0;
     font-weight: bold;
+    font-size: 20px;
 }
 
 footer .item {
@@ -294,6 +295,14 @@ footer ul i{
     }
     .home .container #main #right p {
         text-align: center;
+    }
+    footer .main {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    footer .main > div{
+        width: 100%;
     }
 }
     
