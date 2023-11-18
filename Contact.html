@@ -41,51 +41,86 @@
 </nav>
 
 <!-- Carousel -->
-
+<!--Form-->
 <section class="home">
-  <div id="carouselExampleIndicators" class="carousel slide">
-    <div class="carousel-inner">
-      <div class="carousel-item active" style="background-image: url(image/1.jpg);"> </div>
-      <div class="carousel-item" style="background-image: url(image/7.jpeg);"> </div>
-      <div class="carousel-item" style="background-image: url(image/1.jpeg);"> </div>
+  <div class="container">
+    <div class="row" id="main">
+      <div class="col-md-6" id="left">
+        <h1>Contact Us</h1>
+        <form action="Contact.php" method="POST">
+          <div class="input-field">
+            <input type="text" name="name" id="name" placeholder=" ">
+            <label for="name">Name</label>
+          </div>
+          <div class="input-field">
+            <input type="text" name="email" id="email" placeholder=" ">
+            <label for="email">Email</label>
+          </div>
+          <div class="input-field">
+            <input type="text" name="subject" id="subject" placeholder=" ">
+            <label for="subject">Subject</label>
+          </div>
+          <div class="input-field">
+            <textarea name="message" cols="10" rows="5" placeholder=" "></textarea>
+            <label for="message">Message</label>
+          </div>
+          <div class="button-area">
+            <div class="row">
+            <div class="col-md-6">
+              <button type="submit" name="submit">Send</button>
+            </div>
+            <div class="col-md-6">
+              <span>Sending your message...</span>
+            </div>
+          </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-6" id="right">
+        <h3>Call Us</h3>
+        <p>+94 11 544 5000 <br>+94 71 244 5000</p>
+        <h3>Address</h3>
+        <p>NSBM Green University Town, <br>Pitipana - Thalagala Rd, Homagama</p>
+		  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15846.303361252902!2d80.0415729!3d6.8213291!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2523b05555555%3A0x546c34cd99f6f488!2sNSBM%20Green%20University!5e0!3m2!1sen!2slk!4v1697967540142!5m2!1sen!2slk" width="650" height="317rem" style="border:1px solid rgba(34, 40, 49, 0.35);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
     </div>
   </div>
-  <div class="container" id="form"> 
-	hello</div>
 </section>
-
-<!-- Footer -->
-
-<footer class="footerbg text-white pt-5 pb-4">
-  <div class="container-footer text-center text-md-left">
-    <div class="row text-center text-md-left">
-      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-        <h5 class="text-uppercase mb-4 mr-3 font-weight-bold text-warinig"> <img src="icons/white.png" alt="" width="70"> </h5>
-        <p>Exploring new horizons, one destination at a time.</p>
-      </div>
-      <div class="col-md-2 col-lg-2 col-xl-3 mx-auto mt-3">
-        <h5 class="text-uppercase mb-4 font-weight-bold text-warinig"><b>Support</b></h5>
-        <p> <a href="#" class="text-white" style="text-decoration: none;">Terms & Conditions</a> </p>
-        <p> <a href="#" class="text-white" style="text-decoration: none;">Privacy</a> </p>
-        <p> <a href="#" class="text-white" style="text-decoration: none;">Cookie Preferences</a> </p>
-      </div>
-      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-        <h5 class="text-uppercase mb-4 font-weight-bold text-warinig"><b>Contact Us</b></h5>
-        <p> <i class="fas fa-home mr-3"></i> Padukka, Gallage Mawatha </p>
-        <p> <i class="fas fa-envelope mr-3"></i> renthub@gmail.com </p>
-        <p> <i class="fas fa-phone mr-3"></i> +94 11919903 </p>
-        <p> <i class="fas fa-Location-arrow mr-3"></i> 203 Pitipana, Homagam </p>
-      </div>
-    </div>
-    <ul class="list-unstyled list-inline">
-      <li class="list-inline-item"> <a href="#" class="btn-floating btn-sm text-white"><i class="fab fa-facebook"></i></a> </li>
-      <li class="list-inline-item"> <a href="#" class="btn-floating btn-sm text-white"><i class="fab fa-twitter"></i></a> </li>
-      <li class="list-inline-item"> <a href="#" class="btn-floating btn-sm text-white"><i class="fab fa-google"></i></a> </li>
-      <li class="list-inline-item"> <a href="#" class="btn-floating btn-sm text-white"><i class="fab fa-linkedin-in"></i></a> </li>
-    </ul>
+<footer><div class="main">
+  <div class="logo">
+    <div class="item heading"><img src="icons/white.png" alt="" width="70"></div>
+    <div class="item">Exploring new horizons, one destination at a time.</div>
   </div>
-  <hr class="mb-4">
-  <p class="text-center">Copyright @2023 - All Rights Reserved by RentHub</p>
+  <div class="support">
+    <div class="item heading">SUPPORT</div>
+    <div class="item"><a href="#" class="text-white" style="text-decoration: none;">Terms & Conditions</a></div>
+    <div class="item"><a href="#" class="text-white" style="text-decoration: none;">Privacy</a></div>
+    <div class="item"><a href="#" class="text-white" style="text-decoration: none;">Cookie Preferences</a></div>
+  </div>
+  <div class="contactus">
+    <div class="item heading">CONTACT US</div>
+    <div class="item"><i class="fas fa-home mr-3"></i> Padukka, Gallage Mawatha</div>
+    <div class="item"><i class="fas fa-envelope mr-3"></i> renthub@gmail.com</div>
+    <div class="item"><i class="fas fa-phone mr-3"></i> +94 11919903</div>
+    <div class="item"><i class="fas fa-Location-arrow mr-3"></i> 203 Pitipana, Homagam</div>
+  </div>
+</div>
+  <ul class="list-unstyled list-inline item">
+    <li class="list-inline-item">
+      <a href="#" class="btn-floating btn-sm text-white"><i class="fab fa-facebook"></i></a>
+    </li>
+    <li class="list-inline-item">
+      <a href="#" class="btn-floating btn-sm text-white"><i class="fab fa-twitter"></i></a>
+    </li>
+    <li class="list-inline-item">
+      <a href="#" class="btn-floating btn-sm text-white"><i class="fab fa-google"></i></a>
+    </li>
+    <li class="list-inline-item">
+      <a href="#" class="btn-floating btn-sm text-white"><i class="fab fa-linkedin-in"></i></a>
+    </li>
+  </ul>
+  <hr>
+  <div class="text-center item">Copyright @2023 - All Rights Reserved by RentHub</div>
 </footer>
 <script src="Contact.js"></script>
 </body>

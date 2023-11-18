@@ -154,7 +154,6 @@ input[type=search]:not(:placeholder-shown) {
     text-align: center;
 }
 
-
 .product-name {
     color: black;
     display: block;
@@ -243,7 +242,6 @@ input[type=search]:not(:placeholder-shown) {
 .btn-dark:hover {
     background: var(--carribean-green);
 }
-
 
 /* responsive */
 
