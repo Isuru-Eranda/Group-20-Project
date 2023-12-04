@@ -223,3 +223,25 @@ body{
 .counter-box:hover .counter {
     color: #fff;
 }
+
+/* topic  */
+
+.topic{
+    font-size: 70px;
+    font-style: italic;
+    font-weight: bolder;
+    text-align: left;
+    margin-left: 220px;
+}
+
+.topic .crew{
+    margin-left: 0px;
+}
+
+.topic-paragraph{
+    padding-left: 620px;
+    padding-right: 210px;
+    text-align: justify;
+    margin-top: -160px;
+    margin-bottom: 50px;
+}
