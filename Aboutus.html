@@ -30,43 +30,279 @@
       <div class="collapse navbar-collapse" id="navbarID">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item"><a class="nav-link active nav-center" aria-current="page" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link nav-center" href="products.php">Products</a></li>
-          <li class="nav-item"><a class="nav-link nav-center" href="#">About</a></li>
-          <li class="nav-item"><a class="nav-link nav-center" href="Contact.html">Contact</a></li>
-        </ul>
-        <div class="nav-link nav-center right">
-          <form action="" method="get">
-            <input type="search" name="search_product" placeholder="Search..." autocomplete="off">
-          </form>
-          <a href="cart.php" class="nav-icon">
-            <i class="fa-solid fa-cart-shopping" style="color: #f4f0f0;"></i>
-            <div class="cart-number">
-              <?php
-                $ip_address = getIPAddress();
-                $sql_select_cart = "SELECT * FROM `cart` WHERE ip_address='$ip_address';";
-                $result_select_cart = mysqli_query($conn, $sql_select_cart);
-                echo mysqli_num_rows($result_select_cart);
-              ?>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle nav-center" href="#" id="navbarDarkDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Category
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Vehicle</a>
+              <a class="dropdown-item" href="#">Apparel</a>
+              <a class="dropdown-item" href="#">Camera</a>
+              <a class="dropdown-item" href="#">Entertainment</a>
+              <a class="dropdown-item" href="#">Security</a>
+              <a class="dropdown-item" href="#">Medical</a>
             </div>
-          </a>
-          <?php
-            if(!isset($_SESSION['user_name'])) {
-              echo "<a href='login.php' class='nav-icon'>";
-            }else{
-              echo "<a href='user_area/index.php' class='nav-icon'>";
-            }
-          ?>
-          <i class="fa-solid fa-user" style="color: #f4f0f0;"></i></a>
+          </li>
+          <li class="nav-item"><a class="nav-link nav-center" href="#">About</a></li>
+          <li class="nav-item"><a class="nav-link nav-center" href="#">Contact</a></li>
+        </ul>
+        <div class="nav-link nav-center">
+
+          <from action="">
+            <input type="search" placeholder="Search...">
+          </from>
+          <a class="nav-icon"><i class="far fa-user" style="color: #f4f0f0;"></i></a>
+
         </div>
       </div>
     </div>
   </nav>
 
+  <!-- fieldset -->
+
+
+  <div class="container-fluid">
+    <fieldset class="custom-background mx-auto ">
+      <div class="container">
+        <h1 class="heading">About Us</h1>
+        <div class="discription ">
+          "Welcome to RentHub, your all-encompassing hub for rental solutions, meticulously crafted with unwavering
+          passion and innovation by a dynamic team of dedicated university students currently on a journey to achieve
+          software engineering degrees. We are thrilled to introduce RentHub, an ambitious project born from the fertile
+          grounds of academia, meticulously designed to fulfill your multifaceted rental requirements. Whether your
+          needs span the realms of vehicles, cameras, exquisite attire, cutting-edge entertainment equipment,
+          state-of-the-art security devices, or indispensable medical accessories, RentHub stands ready to serve your
+          every rental aspiration."
+        </div>
+      </div>
+    </fieldset><br>
+  </div><br><br>
+
+  <div class="topic-members">
+    <h1><b>Group Members</b></h1>
+  </div><br>
+
+
+  <!-- cards  -->
+
+  <div class="row">
+    <!-- DEMO 1 Item-->
+    <div class="col-lg-5 mb-3 mb-lg-0">
+      <div class="hover hover-1 text-white rounded"><img src="Card img/blake-connally-B3l0g6HLxr8-unsplash.jpg" alt="">
+        <div class="hover-overlay"></div>
+        <div class="hover-1-content px-5 py-4">
+          <img class="rounded-circle" src="IMG_E7257.JPG" alt="Generic placeholder image" style="max-width: 70px">
+          <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Image
+            </span>Caption</h3>
+          <p class="hover-1-description font-weight-light mb-0">Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit.</p>
+        </div>
+      </div>
+    </div>
+    <!-- DEMO 2 Item-->
+    <div class="col-lg-5">
+      <div class="hover hover-1 text-white rounded"><img src="Card img/fotis-fotopoulos-LJ9KY8pIH3E-unsplash.jpg"
+          alt="">
+        <div class="hover-overlay"></div>
+        <div class="hover-1-content px-5 py-4">
+          <img class="rounded-circle" src="IMG_E7257.JPG" alt="Generic placeholder image" style="max-width: 70px">
+          <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Image
+            </span>Caption</h3>
+          <p class="hover-1-description font-weight-light mb-0">Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit.</p>
+        </div>
+      </div>
+    </div>
+  </div> <br>
+
+  <div class="row">
+    <!-- DEMO 3 Item-->
+    <div class="col-lg-5 mb-3 mb-lg-0">
+      <div class="hover hover-1 text-white rounded"><img src="Card img/joshua-aragon-FGXqbqbGt5o-unsplash.jpg" alt="">
+        <div class="hover-overlay"></div>
+        <div class="hover-1-content px-5 py-4">
+          <img class="rounded-circle" src="IMG_E7257.JPG" alt="Generic placeholder image" style="max-width: 70px">
+          <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Image
+            </span>Caption</h3>
+          <p class="hover-1-description font-weight-light mb-0">Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit.</p>
+        </div>
+      </div>
+    </div>
+    <!-- DEMO 4 Item-->
+    <div class="col-lg-5">
+      <div class="hover hover-1 text-white rounded"><img src="Card img/safar-safarov-MSN8TFhJ0is-unsplash.jpg" alt="">
+        <div class="hover-overlay"></div>
+        <div class="hover-1-content px-5 py-4">
+          <img class="rounded-circle" src="IMG_E7257.JPG" alt="Generic placeholder image" style="max-width: 70px">
+          <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Image
+            </span>Caption</h3>
+          <p class="hover-1-description font-weight-light mb-0">Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit.</p>
+        </div>
+      </div>
+    </div>
+  </div><br>
+
+  <div class="row">
+    <!-- DEMO 5 Item-->
+    <div class="col-lg-5 mb-3 mb-lg-0">
+      <div class="hover hover-1 text-white rounded"><img src="Card img/blake-connally-B3l0g6HLxr8-unsplash.jpg" alt="">
+        <div class="hover-overlay"></div>
+        <div class="hover-1-content px-5 py-4">
+          <img class="rounded-circle" src="IMG_E7257.JPG" alt="Generic placeholder image" style="max-width: 70px">
+          <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Image
+            </span>Caption</h3>
+          <p class="hover-1-description font-weight-light mb-0">Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit.</p>
+        </div>
+      </div>
+    </div>
+    <!-- DEMO 6 Item-->
+    <div class="col-lg-5">
+      <div class="hover hover-1 text-white rounded"><img src="Card img/fotis-fotopoulos-LJ9KY8pIH3E-unsplash.jpg"
+          alt="">
+        <div class="hover-overlay"></div>
+        <div class="hover-1-content px-5 py-4">
+          <img class="rounded-circle" src="IMG_E7257.JPG" alt="Generic placeholder image" style="max-width: 70px">
+          <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Image
+            </span>Caption</h3>
+          <p class="hover-1-description font-weight-light mb-0">Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit.</p>
+        </div>
+      </div>
+    </div>
+  </div><br>
+
+  <div class="row">
+    <!-- DEMO 7 Item-->
+    <div class="col-lg-5 mb-3 mb-lg-0">
+      <div class="hover hover-1 text-white rounded"><img src="Card img/joshua-aragon-FGXqbqbGt5o-unsplash.jpg" alt="">
+        <div class="hover-overlay"></div>
+        <div class="hover-1-content px-5 py-4">
+          <img class="rounded-circle" src="IMG_E7257.JPG" alt="Generic placeholder image" style="max-width: 70px">
+          <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Image
+            </span>Caption</h3>
+          <p class="hover-1-description font-weight-light mb-0">Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit.</p>
+        </div>
+      </div>
+    </div>
+    <!-- DEMO 8 Item-->
+    <div class="col-lg-5">
+      <div class="hover hover-1 text-white rounded"><img src="Card img/safar-safarov-MSN8TFhJ0is-unsplash.jpg" alt="">
+        <div class="hover-overlay"></div>
+        <div class="hover-1-content px-5 py-4">
+          <img class="rounded-circle" src="IMG_E7257.JPG" alt="Generic placeholder image" style="max-width: 70px">
+          <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Image
+            </span>Caption</h3>
+          <p class="hover-1-description font-weight-light mb-0">Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit.</p>
+        </div>
+      </div>
+    </div>
+  </div><br>
+
+  <div class="row">
+    <!-- DEMO 9 Item-->
+    <div class="col-lg-5 mb-3 mb-lg-0">
+      <div class="hover hover-1 text-white rounded"><img src="Card img/blake-connally-B3l0g6HLxr8-unsplash.jpg" alt="">
+        <div class="hover-overlay"></div>
+        <div class="hover-1-content px-5 py-4">
+          <img class="rounded-circle" src="IMG_E7257.JPG" alt="Generic placeholder image" style="max-width: 70px">
+          <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Image
+            </span>Caption</h3>
+          <p class="hover-1-description font-weight-light mb-0">Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit.</p>
+        </div>
+      </div>
+    </div>
+    <!-- DEMO 10 Item-->
+    <div class="col-lg-5">
+      <div class="hover hover-1 text-white rounded"><img src="Card img/fotis-fotopoulos-LJ9KY8pIH3E-unsplash.jpg"
+          alt="">
+        <div class="hover-overlay"></div>
+        <div class="hover-1-content px-5 py-4">
+          <img class="rounded-circle" src="IMG_E7257.JPG" alt="Generic placeholder image" style="max-width: 70px">
+          <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Image
+            </span>Caption</h3>
+          <p class="hover-1-description font-weight-light mb-0">Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit.</p>
+        </div>
+      </div>
+    </div>
+  </div><br>
 
 
 
+  <!-- Footer -->
 
-    <script src="Aboutus.js"></script>
+  <footer class="footerbg text-white pt-5 pb-4">
+    <div class="container-footer text-center text-md-left">
+      <div class="row text-center text-md-left">
 
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 mr-3 font-weight-bold text-warinig">
+            <img src="image/white.png" alt="" width="70">
+          </h5>
+          <p>Exploring new horizons, one destination at a time.</p>
+
+        </div>
+
+        <div class="col-md-2 col-lg-2 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-warinig"><b>Support</b></h5>
+          <p>
+            <a href="#" class="text-white" style="text-decoration: none;">Terms & Conditions</a>
+          </p>
+          <p>
+            <a href="#" class="text-white" style="text-decoration: none;">Privacy</a>
+          </p>
+          <p>
+            <a href="#" class="text-white" style="text-decoration: none;">Cookie Preferences</a>
+          </p>
+        </div>
+
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-warinig"><b>Contact Us</b></h5>
+          <p>
+            <i class="fas fa-home mr-3"></i> Padukka, Gallage Mawatha
+          </p>
+          <p>
+            <i class="fas fa-envelope mr-3"></i> renthub@gmail.com
+          </p>
+          <p>
+            <i class="fas fa-phone mr-3"></i> +94 11919903
+          </p>
+          <p>
+            <i class="fas fa-Location-arrow mr-3"></i> 203 Pitipana, Homagam
+          </p>
+        </div>
+      </div>
+      <ul class="list-unstyled list-inline">
+        <li class="list-inline-item">
+          <a href="#" class="btn-floating btn-sm text-white"><i class="fab fa-facebook"></i></a>
+        </li>
+        <li class="list-inline-item">
+          <a href="#" class="btn-floating btn-sm text-white"><i class="fab fa-twitter"></i></a>
+        </li>
+        <li class="list-inline-item">
+          <a href="#" class="btn-floating btn-sm text-white"><i class="fab fa-google"></i></a>
+        </li>
+        <li class="list-inline-item">
+          <a href="#" class="btn-floating btn-sm text-white"><i class="fab fa-linkedin-in"></i></a>
+        </li>
+      </ul>
+    </div>
+    <hr class="mb-4">
+
+    <p class="text-center">Copyright @2023 - All Rights Reserved by RentHub</p>
+
+  </footer>
+
+
+  <script src="Aboutus.js"></script>
 </body>
+</body>
+
 </html>
