@@ -166,3 +166,60 @@ body{
 .topic-members{
     text-align: center;
 }
+
+/* counter */
+
+.container-1{
+    margin-top:100px;
+}
+
+.counter-box {
+	display: block;
+	background: #f6f6f6;
+	padding: 40px 20px 37px;
+	text-align: center;
+    border-radius: 20px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.counter-box:hover {
+    background: #00ADB5; 
+    color: #fff; 
+}
+
+.counter-box p {
+	margin: 5px 0 0;
+	padding: 0;
+	color: #909090;
+	font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.counter-box:hover p {
+    color: #fff;
+}
+
+.counter-box i {
+	font-size: 60px;
+	margin: 0 0 15px;
+	color: #393E46;
+    transition: color 0.3s ease;
+    
+}
+
+.counter-box:hover i {
+    color: #fff;
+}
+
+.counter { 
+	display: block;
+	font-size: 32px;
+	font-weight: 700;
+	color: #666;
+	line-height: 28px;
+    transition: color 0.3s ease;
+}
+
+.counter-box:hover .counter {
+    color: #fff;
+}
