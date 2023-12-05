@@ -341,3 +341,23 @@ body{
   padding: 10px;
   margin-top: 10px;
 }
+
+/* footer */
+.list-inline-item .btn-floating{
+  font-size: 23px;
+}
+
+.footerbg{
+  background-color: #222831;
+}
+
+.col-md-3 p{
+  text-align: left;
+  margin-left: 20px;
+}
+
+.col-md-4{
+  text-align: left;
+  
+}
+
