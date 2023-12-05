@@ -16,61 +16,61 @@
 
 <body>
 
-    <!-- navbar -->
+  <!-- navbar -->
 
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
-      <div class="container">
-        <a class="navbar-brand fs-4" href="#">
-          <img src="icons-05/white.png" alt="" width="70">
-        </a>
-        <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="collapse"
-          data-bs-target="#navbarID" aria-controls="navbarID" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarID">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item"><a class="nav-link active nav-center" aria-current="page" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link nav-center" href="products.php">Products</a></li>
-            <li class="nav-item"><a class="nav-link nav-center" href="#">About</a></li>
-            <li class="nav-item"><a class="nav-link nav-center" href="Contact.html">Contact</a></li>
-          </ul>
-          <div class="nav-link nav-center right">
-            <form action="" method="get">
-              <input type="search" name="search_product" placeholder="Search..." autocomplete="off">
-            </form>
-            <a href="cart.php" class="nav-icon">
-              <i class="fa-solid fa-cart-shopping" style="color: #f4f0f0;"></i>
-              <div class="cart-number">
-                <?php
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand fs-4" href="#">
+        <img src="icons-05/white.png" alt="" width="70">
+      </a>
+      <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarID" aria-controls="navbarID" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarID">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link active nav-center" aria-current="page" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link nav-center" href="products.php">Products</a></li>
+          <li class="nav-item"><a class="nav-link nav-center" href="#">About</a></li>
+          <li class="nav-item"><a class="nav-link nav-center" href="Contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-link nav-center right">
+          <form action="" method="get">
+            <input type="search" name="search_product" placeholder="Search..." autocomplete="off">
+          </form>
+          <a href="cart.php" class="nav-icon">
+            <i class="fa-solid fa-cart-shopping" style="color: #f4f0f0;"></i>
+            <div class="cart-number">
+              <?php
                   $ip_address = getIPAddress();
                   $sql_select_cart = "SELECT * FROM `cart` WHERE ip_address='$ip_address';";
                   $result_select_cart = mysqli_query($conn, $sql_select_cart);
                   echo mysqli_num_rows($result_select_cart);
                 ?>
-              </div>
-            </a>
-            <?php
+            </div>
+          </a>
+          <?php
               if(!isset($_SESSION['user_name'])) {
                 echo "<a href='login.php' class='nav-icon'>";
               }else{
                 echo "<a href='user_area/index.php' class='nav-icon'>";
               }
             ?>
-            <i class="fa-solid fa-user" style="color: #f4f0f0;"></i></a>
-          </div>
+          <i class="fa-solid fa-user" style="color: #f4f0f0;"></i></a>
         </div>
       </div>
-    </nav>
-  
-    <!-- fieldset -->
-  
-  
-    <div class="container-fluid">
-      <fieldset class="custom-background mx-auto ">
-        <div class="container">
-          <h1 class="heading">About Us</h1>
-          <div class="discription ">
-            "Welcome to RentHub, we aim to let everyone readily experience life’s joys without costly ownership.
+    </div>
+  </nav>
+
+  <!-- fieldset -->
+
+
+  <div class="container-fluid">
+    <fieldset class="custom-background mx-auto ">
+      <div class="container">
+        <h1 class="heading">About Us</h1>
+        <div class="discription ">
+          "Welcome to RentHub, we aim to let everyone readily experience life’s joys without costly ownership.
           Whether you dream of effortless road trips in a convertible sports car, standing out elegantly at a friend’s
           wedding in that perfect dress, hosting a backyard barbecue under strings of party lights, or simply finding a
           lovely furnished apartment to call home for a little while - we make it happen. Our meticulously maintained
@@ -80,12 +80,12 @@
           explore, express yourself, entertain, and find your home away from home. We believe life’s best moments
           shouldn’t be locked behind price tags, which is why we provide the things you need for the experiences you
           cherish, conveniently on rent."
-          </div>
         </div>
-      </fieldset><br>
-    </div>
+      </div>
+    </fieldset><br>
+  </div>
 
-    <!-- counter  -->
+  <!-- counter  -->
 
   <div class="container-1">
 
@@ -122,22 +122,22 @@
     </div>
   </div><br><br><br><br>
 
-    <!-- topic  -->
+  <!-- topic  -->
 
-    <div class="topic-members">
-      <p class="topic">OUR TEAM <br>
-        <span class="crew">MEMBERS</span>
-      </p>
-      <p class="topic-paragraph">"Welcome to our team of undergraduate software engineering and computer sciences students
-        from NSBM Green
-        University. Comprising passionate individuals, our diverse crew collaborates to present our inaugural project a
-        website designed to serve as a valuable resource for anyone seeking information and assistance. Explore the
-        expertise of our NSBM community through this innovative platform"</p>
-    </div><br>
-  
-   <!-- cards  -->
+  <div class="topic-members">
+    <p class="topic">OUR TEAM <br>
+      <span class="crew">MEMBERS</span>
+    </p>
+    <p class="topic-paragraph">"Welcome to our team of undergraduate software engineering and computer sciences students
+      from NSBM Green
+      University. Comprising passionate individuals, our diverse crew collaborates to present our inaugural project a
+      website designed to serve as a valuable resource for anyone seeking information and assistance. Explore the
+      expertise of our NSBM community through this innovative platform"</p>
+  </div><br>
 
-   <div class="row">
+  <!-- cards  -->
+
+  <div class="row">
     <!-- DEMO 1 Item-->
     <div class="col-lg-4 mb-3 mb-lg-0">
       <div class="hover hover-1 text-white rounded"><img src="Card img/IMG_3053 2.jpeg" alt="">
@@ -157,45 +157,45 @@
     </div>
 
 
-        <!-- DEMO 2 Item-->
-        <div class="col-lg-4">
-          <div class="hover hover-1 text-white rounded"><img src="Card img/garuka.JPG" alt="">
-            <div class="hover-overlay"></div>
-            <div class="hover-1-content px-5 py-4">
-    
-              <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">GARUKA
-                </span>VEENATH</h3>
-              <p class="hover-1-description font-weight mb-0">Front end and Back end Developer</p>
-              <p class="hover-1-description font-weight-light mb-0 mr-3">
-                <a href=""><i class="fa-brands fa-github fa-xl" style="color: #f4f0f0;"></i></a>
-                <a href=""><i class="fa-brands fa-instagram fa-xl" style="color: #f4f0f0;"></i></a>
-                <a href=""><i class="fa-brands fa-facebook fa-xl" style="color: #f4f0f0;"></i></a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div> <br>
+    <!-- DEMO 2 Item-->
+    <div class="col-lg-4">
+      <div class="hover hover-1 text-white rounded"><img src="Card img/garuka.JPG" alt="">
+        <div class="hover-overlay"></div>
+        <div class="hover-1-content px-5 py-4">
 
-      <div class="row">
-        <!-- DEMO 3 Item-->
-        <div class="col-lg-4 mb-3 mb-lg-0">
-          <div class="hover hover-1 text-white rounded"><img src="Card img/pubudu.jpeg" alt="">
-            <div class="hover-overlay"></div>
-            <div class="hover-1-content px-5 py-4">
-    
-              <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">PUBUDU
-                </span>CHANDIMA</h3>
-              <p class="hover-1-description font-weight-light mb-0">Front end Developer</p>
-              <p class="hover-1-description font-weight-light mb-0 mr-3">
-                <a href=""><i class="fa-brands fa-github fa-xl" style="color: #f4f0f0;"></i></a>
-                <a href=""><i class="fa-brands fa-instagram fa-xl" style="color: #f4f0f0;"></i></a>
-                <a href=""><i class="fa-brands fa-facebook fa-xl" style="color: #f4f0f0;"></i></a>
-              </p>
-            </div>
-          </div>
+          <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">GARUKA
+            </span>VEENATH</h3>
+          <p class="hover-1-description font-weight mb-0">Front end and Back end Developer</p>
+          <p class="hover-1-description font-weight-light mb-0 mr-3">
+            <a href=""><i class="fa-brands fa-github fa-xl" style="color: #f4f0f0;"></i></a>
+            <a href=""><i class="fa-brands fa-instagram fa-xl" style="color: #f4f0f0;"></i></a>
+            <a href=""><i class="fa-brands fa-facebook fa-xl" style="color: #f4f0f0;"></i></a>
+          </p>
         </div>
+      </div>
+    </div>
+  </div> <br>
 
-            <!-- DEMO 4 Item-->
+  <div class="row">
+    <!-- DEMO 3 Item-->
+    <div class="col-lg-4 mb-3 mb-lg-0">
+      <div class="hover hover-1 text-white rounded"><img src="Card img/pubudu.jpeg" alt="">
+        <div class="hover-overlay"></div>
+        <div class="hover-1-content px-5 py-4">
+
+          <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">PUBUDU
+            </span>CHANDIMA</h3>
+          <p class="hover-1-description font-weight-light mb-0">Front end Developer</p>
+          <p class="hover-1-description font-weight-light mb-0 mr-3">
+            <a href=""><i class="fa-brands fa-github fa-xl" style="color: #f4f0f0;"></i></a>
+            <a href=""><i class="fa-brands fa-instagram fa-xl" style="color: #f4f0f0;"></i></a>
+            <a href=""><i class="fa-brands fa-facebook fa-xl" style="color: #f4f0f0;"></i></a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DEMO 4 Item-->
     <div class="col-lg-4">
       <div class="hover hover-1 text-white rounded"><img src="Card img/mudith.jpeg" alt="">
         <div class="hover-overlay"></div>
@@ -206,8 +206,10 @@
           <p class="hover-1-description font-weight-light mb-0">Front end Developer</p>
           <p class="hover-1-description font-weight-light mb-0 mr-3">
             <a href=""><i class="fa-brands fa-github fa-xl" style="color: #f4f0f0;"></i></a>
-            <a href="https://www.instagram.com/mudith_m_gallage/"><i class="fa-brands fa-instagram fa-xl" style="color: #f4f0f0;"></i></a>
-            <a href="https://www.facebook.com/gallage.mudith"><i class="fa-brands fa-facebook fa-xl" style="color: #f4f0f0;"></i></a>
+            <a href="https://www.instagram.com/mudith_m_gallage/"><i class="fa-brands fa-instagram fa-xl"
+                style="color: #f4f0f0;"></i></a>
+            <a href="https://www.facebook.com/gallage.mudith"><i class="fa-brands fa-facebook fa-xl"
+                style="color: #f4f0f0;"></i></a>
           </p>
         </div>
       </div>
@@ -233,30 +235,31 @@
       </div>
     </div>
 
-        <!-- DEMO 6 Item-->
-        <div class="col-lg-4">
-          <div class="hover hover-1 text-white rounded"><img src="Card img/dion.jpg" alt="">
-            <div class="hover-overlay"></div>
-            <div class="hover-1-content px-5 py-4">
-    
-              <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">DION
-                </span>LIYANAGE</h3>
-              <p class="hover-1-description font-weight-light mb-0">Front end Developer</p>
-              <p class="hover-1-description font-weight-light mb-0 mr-3">
-                <a href=""><i class="fa-brands fa-github fa-xl" style="color: #f4f0f0;"></i></a>
-                <a href=""><i class="fa-brands fa-instagram fa-xl" style="color: #f4f0f0;"></i></a>
-                <a href=""><i class="fa-brands fa-facebook fa-xl" style="color: #f4f0f0;"></i></a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div><br>
-    
-      <div class="row">
+    <!-- DEMO 6 Item-->
+    <div class="col-lg-4">
+      <div class="hover hover-1 text-white rounded"><img src="Card img/dion.jpg" alt="">
+        <div class="hover-overlay"></div>
+        <div class="hover-1-content px-5 py-4">
 
-            <!-- DEMO 7 Item-->
+          <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">DION
+            </span>LIYANAGE</h3>
+          <p class="hover-1-description font-weight-light mb-0">Front end Developer</p>
+          <p class="hover-1-description font-weight-light mb-0 mr-3">
+            <a href=""><i class="fa-brands fa-github fa-xl" style="color: #f4f0f0;"></i></a>
+            <a href=""><i class="fa-brands fa-instagram fa-xl" style="color: #f4f0f0;"></i></a>
+            <a href=""><i class="fa-brands fa-facebook fa-xl" style="color: #f4f0f0;"></i></a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div><br>
+
+  <div class="row">
+
+    <!-- DEMO 7 Item-->
     <div class="col-lg-4 mb-3 mb-lg-0">
-      <div class="hover hover-1 text-white rounded"><img src="Card img/WhatsApp Image 2023-12-03 at 12.56.51 PM.jpeg" alt="">
+      <div class="hover hover-1 text-white rounded"><img src="Card img/WhatsApp Image 2023-12-03 at 12.56.51 PM.jpeg"
+          alt="">
         <div class="hover-overlay"></div>
         <div class="hover-1-content px-5 py-4">
 
@@ -274,8 +277,31 @@
       </div>
     </div>
 
+    <!-- DEMO 8 Item-->
+    <div class="col-lg-4">
+      <div class="hover hover-1 text-white rounded"><img src="Card img/chanodya.jpg" alt="">
+        <div class="hover-overlay"></div>
+        <div class="hover-1-content px-5 py-4">
 
-  <script src="Aboutus.js"></script>
+          <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">CHANODYA
+            </span>PRAVEEN</h3>
+          <p class="hover-1-description font-weight-light mb-0">Front end Developer</p>
+          <p class="hover-1-description font-weight-light mb-0 mr-3">
+            <a href=""><i class="fa-brands fa-github fa-xl" style="color: #f4f0f0;"></i></a>
+            <a href="https://instagram.com/chanodyapraveen?utm_source=qr&igshid=MzNlNGNkZWQ4Mg=="><i
+                class="fa-brands fa-instagram fa-xl" style="color: #f4f0f0;"></i></a>
+            <a href="https://www.facebook.com/chanodya.praveen.54?mibextid=ZbWKwL"><i
+                class="fa-brands fa-facebook fa-xl" style="color: #f4f0f0;"></i></a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div><br>
+
+  <div class="row">
+
+
+    <script src="Aboutus.js"></script>
 </body>
 </body>
 
