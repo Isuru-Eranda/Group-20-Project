@@ -21,7 +21,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
     <div class="container">
       <a class="navbar-brand fs-4" href="#">
-        <img src="image/white.png" alt="" width="70">
+        <img src="icons-05/white.png" alt="" width="70">
       </a>
       <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarID" aria-controls="navbarID" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,30 +30,33 @@
       <div class="collapse navbar-collapse" id="navbarID">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item"><a class="nav-link active nav-center" aria-current="page" href="#">Home</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle nav-center" href="#" id="navbarDarkDropdownMenuLink" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              Category
-            </a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Vehicle</a>
-              <a class="dropdown-item" href="#">Apparel</a>
-              <a class="dropdown-item" href="#">Camera</a>
-              <a class="dropdown-item" href="#">Entertainment</a>
-              <a class="dropdown-item" href="#">Security</a>
-              <a class="dropdown-item" href="#">Medical</a>
-            </div>
-          </li>
+          <li class="nav-item"><a class="nav-link nav-center" href="products.php">Products</a></li>
           <li class="nav-item"><a class="nav-link nav-center" href="#">About</a></li>
-          <li class="nav-item"><a class="nav-link nav-center" href="#">Contact</a></li>
+          <li class="nav-item"><a class="nav-link nav-center" href="Contact.html">Contact</a></li>
         </ul>
-        <div class="nav-link nav-center">
-
-          <from action="">
-            <input type="search" placeholder="Search...">
-          </from>
-          <a class="nav-icon"><i class="far fa-user" style="color: #f4f0f0;"></i></a>
-
+        <div class="nav-link nav-center right">
+          <form action="" method="get">
+            <input type="search" name="search_product" placeholder="Search..." autocomplete="off">
+          </form>
+          <a href="cart.php" class="nav-icon">
+            <i class="fa-solid fa-cart-shopping" style="color: #f4f0f0;"></i>
+            <div class="cart-number">
+              <?php
+                  $ip_address = getIPAddress();
+                  $sql_select_cart = "SELECT * FROM `cart` WHERE ip_address='$ip_address';";
+                  $result_select_cart = mysqli_query($conn, $sql_select_cart);
+                  echo mysqli_num_rows($result_select_cart);
+                ?>
+            </div>
+          </a>
+          <?php
+              if(!isset($_SESSION['user_name'])) {
+                echo "<a href='login.php' class='nav-icon'>";
+              }else{
+                echo "<a href='user_area/index.php' class='nav-icon'>";
+              }
+            ?>
+          <i class="fa-solid fa-user" style="color: #f4f0f0;"></i></a>
         </div>
       </div>
     </div>
@@ -67,50 +70,107 @@
       <div class="container">
         <h1 class="heading">About Us</h1>
         <div class="discription ">
-          "Welcome to RentHub, your all-encompassing hub for rental solutions, meticulously crafted with unwavering
-          passion and innovation by a dynamic team of dedicated university students currently on a journey to achieve
-          software engineering degrees. We are thrilled to introduce RentHub, an ambitious project born from the fertile
-          grounds of academia, meticulously designed to fulfill your multifaceted rental requirements. Whether your
-          needs span the realms of vehicles, cameras, exquisite attire, cutting-edge entertainment equipment,
-          state-of-the-art security devices, or indispensable medical accessories, RentHub stands ready to serve your
-          every rental aspiration."
+          "Welcome to RentHub, we aim to let everyone readily experience life’s joys without costly ownership.
+          Whether you dream of effortless road trips in a convertible sports car, standing out elegantly at a friend’s
+          wedding in that perfect dress, hosting a backyard barbecue under strings of party lights, or simply finding a
+          lovely furnished apartment to call home for a little while - we make it happen. Our meticulously maintained
+          fleet of vehicles, extensive dress collection catering to any style or occasion, a vast array of party and
+          garden essentials, and carefully curated rental properties remove the hassle and cost barriers from creating
+          wonderful memories. With reliable service and a passion for customer satisfaction, RentHub empowers you to
+          explore, express yourself, entertain, and find your home away from home. We believe life’s best moments
+          shouldn’t be locked behind price tags, which is why we provide the things you need for the experiences you
+          cherish, conveniently on rent."
         </div>
       </div>
     </fieldset><br>
-  </div><br><br>
+  </div>
+
+  <!-- counter  -->
+
+  <div class="container-1">
+
+    <div class="row">
+
+      <div class="four col-md-2">
+        <div class="counter-box colored">
+          <i class="fa fa-thumbs-o-up"></i>
+          <span class="counter">2147</span>
+          <p>Happy Customers</p>
+        </div>
+      </div>
+      <div class="four col-md-2">
+        <div class="counter-box">
+          <i class="fa fa-group"></i>
+          <span class="counter">3275</span>
+          <p>Registered Members</p>
+        </div>
+      </div>
+      <div class="four col-md-2">
+        <div class="counter-box">
+          <i class="fa  fa-shopping-cart"></i>
+          <span class="counter">289</span>
+          <p>Available Products</p>
+        </div>
+      </div>
+      <div class="four col-md-2">
+        <div class="counter-box">
+          <i class="fa  fa-user"></i>
+          <span class="counter">1563</span>
+          <p>Saved Trees</p>
+        </div>
+      </div>
+    </div>
+  </div><br><br><br><br>
+
+  <!-- topic  -->
 
   <div class="topic-members">
-    <h1><b>Group Members</b></h1>
+    <p class="topic">OUR TEAM <br>
+      <span class="crew">MEMBERS</span>
+    </p>
+    <p class="topic-paragraph">"Welcome to our team of undergraduate software engineering and computer sciences students
+      from NSBM Green
+      University. Comprising passionate individuals, our diverse crew collaborates to present our inaugural project a
+      website designed to serve as a valuable resource for anyone seeking information and assistance. Explore the
+      expertise of our NSBM community through this innovative platform"</p>
   </div><br>
-
 
   <!-- cards  -->
 
   <div class="row">
     <!-- DEMO 1 Item-->
-    <div class="col-lg-5 mb-3 mb-lg-0">
-      <div class="hover hover-1 text-white rounded"><img src="Card img/blake-connally-B3l0g6HLxr8-unsplash.jpg" alt="">
+    <div class="col-lg-4 mb-3 mb-lg-0">
+      <div class="hover hover-1 text-white rounded"><img src="Card img/IMG_3053 2.jpeg" alt="">
         <div class="hover-overlay"></div>
         <div class="hover-1-content px-5 py-4">
-          <img class="rounded-circle" src="IMG_E7257.JPG" alt="Generic placeholder image" style="max-width: 70px">
-          <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Image
-            </span>Caption</h3>
-          <p class="hover-1-description font-weight-light mb-0">Lorem ipsum dolor sit amet,
-            consectetur adipisicing elit.</p>
+
+          <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">JAITH
+            </span>SANDIV</h3>
+          <p class="hover-1-description font-weight-light mb-0">Front end and Back end Developer</p>
+          <p class="hover-1-description font-weight-light mb-0 mr-3">
+            <a href=""><i class="fa-brands fa-github fa-xl" style="color: #f4f0f0;"></i></a>
+            <a href=""><i class="fa-brands fa-instagram fa-xl" style="color: #f4f0f0;"></i></a>
+            <a href=""><i class="fa-brands fa-facebook fa-xl" style="color: #f4f0f0;"></i></a>
+          </p>
         </div>
       </div>
     </div>
+
+
     <!-- DEMO 2 Item-->
-    <div class="col-lg-5">
-      <div class="hover hover-1 text-white rounded"><img src="Card img/fotis-fotopoulos-LJ9KY8pIH3E-unsplash.jpg"
-          alt="">
+    <div class="col-lg-4">
+      <div class="hover hover-1 text-white rounded"><img src="Card img/garuka.JPG" alt="">
         <div class="hover-overlay"></div>
         <div class="hover-1-content px-5 py-4">
-          <img class="rounded-circle" src="IMG_E7257.JPG" alt="Generic placeholder image" style="max-width: 70px">
-          <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Image
-            </span>Caption</h3>
-          <p class="hover-1-description font-weight-light mb-0">Lorem ipsum dolor sit amet,
-            consectetur adipisicing elit.</p>
+
+          <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">GARUKA
+            </span>VEENATH</h3>
+          <p class="hover-1-description font-weight mb-0">Front end and Back end Developer</p>
+          <p class="hover-1-description font-weight-light mb-0 mr-3">
+            <a href=""><i class="fa-brands fa-github fa-xl" style="color: #f4f0f0;"></i></a>
+            <a href=""><i class="fa-brands fa-instagram fa-xl" style="color: #f4f0f0;"></i></a>
+            <a href=""><i class="fa-brands fa-facebook fa-xl" style="color: #f4f0f0;"></i></a>
+          </p>
         </div>
       </div>
     </div>
@@ -118,28 +178,39 @@
 
   <div class="row">
     <!-- DEMO 3 Item-->
-    <div class="col-lg-5 mb-3 mb-lg-0">
-      <div class="hover hover-1 text-white rounded"><img src="Card img/joshua-aragon-FGXqbqbGt5o-unsplash.jpg" alt="">
+    <div class="col-lg-4 mb-3 mb-lg-0">
+      <div class="hover hover-1 text-white rounded"><img src="Card img/pubudu.jpeg" alt="">
         <div class="hover-overlay"></div>
         <div class="hover-1-content px-5 py-4">
-          <img class="rounded-circle" src="IMG_E7257.JPG" alt="Generic placeholder image" style="max-width: 70px">
-          <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Image
-            </span>Caption</h3>
-          <p class="hover-1-description font-weight-light mb-0">Lorem ipsum dolor sit amet,
-            consectetur adipisicing elit.</p>
+
+          <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">PUBUDU
+            </span>CHANDIMA</h3>
+          <p class="hover-1-description font-weight-light mb-0">Front end Developer</p>
+          <p class="hover-1-description font-weight-light mb-0 mr-3">
+            <a href=""><i class="fa-brands fa-github fa-xl" style="color: #f4f0f0;"></i></a>
+            <a href=""><i class="fa-brands fa-instagram fa-xl" style="color: #f4f0f0;"></i></a>
+            <a href=""><i class="fa-brands fa-facebook fa-xl" style="color: #f4f0f0;"></i></a>
+          </p>
         </div>
       </div>
     </div>
+
     <!-- DEMO 4 Item-->
-    <div class="col-lg-5">
-      <div class="hover hover-1 text-white rounded"><img src="Card img/safar-safarov-MSN8TFhJ0is-unsplash.jpg" alt="">
+    <div class="col-lg-4">
+      <div class="hover hover-1 text-white rounded"><img src="Card img/mudith.jpeg" alt="">
         <div class="hover-overlay"></div>
         <div class="hover-1-content px-5 py-4">
-          <img class="rounded-circle" src="IMG_E7257.JPG" alt="Generic placeholder image" style="max-width: 70px">
-          <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Image
-            </span>Caption</h3>
-          <p class="hover-1-description font-weight-light mb-0">Lorem ipsum dolor sit amet,
-            consectetur adipisicing elit.</p>
+
+          <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">MUDITH
+            </span>MILINDA</h3>
+          <p class="hover-1-description font-weight-light mb-0">Front end Developer</p>
+          <p class="hover-1-description font-weight-light mb-0 mr-3">
+            <a href=""><i class="fa-brands fa-github fa-xl" style="color: #f4f0f0;"></i></a>
+            <a href="https://www.instagram.com/mudith_m_gallage/"><i class="fa-brands fa-instagram fa-xl"
+                style="color: #f4f0f0;"></i></a>
+            <a href="https://www.facebook.com/gallage.mudith"><i class="fa-brands fa-facebook fa-xl"
+                style="color: #f4f0f0;"></i></a>
+          </p>
         </div>
       </div>
     </div>
@@ -147,58 +218,81 @@
 
   <div class="row">
     <!-- DEMO 5 Item-->
-    <div class="col-lg-5 mb-3 mb-lg-0">
-      <div class="hover hover-1 text-white rounded"><img src="Card img/blake-connally-B3l0g6HLxr8-unsplash.jpg" alt="">
+    <div class="col-lg-4 mb-3 mb-lg-0">
+      <div class="hover hover-1 text-white rounded"><img src="Card img/isuru.JPG" alt="">
         <div class="hover-overlay"></div>
         <div class="hover-1-content px-5 py-4">
-          <img class="rounded-circle" src="IMG_E7257.JPG" alt="Generic placeholder image" style="max-width: 70px">
-          <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Image
-            </span>Caption</h3>
-          <p class="hover-1-description font-weight-light mb-0">Lorem ipsum dolor sit amet,
-            consectetur adipisicing elit.</p>
+
+          <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">ISURU
+            </span>ERANDA</h3>
+          <p class="hover-1-description font-weight-light mb-0">Front end Developer</p>
+          <p class="hover-1-description font-weight-light mb-0 mr-3">
+            <a href=""><i class="fa-brands fa-github fa-xl" style="color: #f4f0f0;"></i></a>
+            <a href=""><i class="fa-brands fa-instagram fa-xl" style="color: #f4f0f0;"></i></a>
+            <a href=""><i class="fa-brands fa-facebook fa-xl" style="color: #f4f0f0;"></i></a>
+          </p>
         </div>
       </div>
     </div>
+
     <!-- DEMO 6 Item-->
-    <div class="col-lg-5">
-      <div class="hover hover-1 text-white rounded"><img src="Card img/fotis-fotopoulos-LJ9KY8pIH3E-unsplash.jpg"
-          alt="">
+    <div class="col-lg-4">
+      <div class="hover hover-1 text-white rounded"><img src="Card img/dion.jpg" alt="">
         <div class="hover-overlay"></div>
         <div class="hover-1-content px-5 py-4">
-          <img class="rounded-circle" src="IMG_E7257.JPG" alt="Generic placeholder image" style="max-width: 70px">
-          <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Image
-            </span>Caption</h3>
-          <p class="hover-1-description font-weight-light mb-0">Lorem ipsum dolor sit amet,
-            consectetur adipisicing elit.</p>
+
+          <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">DION
+            </span>LIYANAGE</h3>
+          <p class="hover-1-description font-weight-light mb-0">Front end Developer</p>
+          <p class="hover-1-description font-weight-light mb-0 mr-3">
+            <a href=""><i class="fa-brands fa-github fa-xl" style="color: #f4f0f0;"></i></a>
+            <a href=""><i class="fa-brands fa-instagram fa-xl" style="color: #f4f0f0;"></i></a>
+            <a href=""><i class="fa-brands fa-facebook fa-xl" style="color: #f4f0f0;"></i></a>
+          </p>
         </div>
       </div>
     </div>
   </div><br>
 
   <div class="row">
+
     <!-- DEMO 7 Item-->
-    <div class="col-lg-5 mb-3 mb-lg-0">
-      <div class="hover hover-1 text-white rounded"><img src="Card img/joshua-aragon-FGXqbqbGt5o-unsplash.jpg" alt="">
+    <div class="col-lg-4 mb-3 mb-lg-0">
+      <div class="hover hover-1 text-white rounded"><img src="Card img/WhatsApp Image 2023-12-03 at 12.56.51 PM.jpeg"
+          alt="">
         <div class="hover-overlay"></div>
         <div class="hover-1-content px-5 py-4">
-          <img class="rounded-circle" src="IMG_E7257.JPG" alt="Generic placeholder image" style="max-width: 70px">
-          <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Image
-            </span>Caption</h3>
-          <p class="hover-1-description font-weight-light mb-0">Lorem ipsum dolor sit amet,
-            consectetur adipisicing elit.</p>
+
+          <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">YEHAN
+            </span>RAVEESHA</h3>
+          <p class="hover-1-description font-weight-light mb-0">Front end Developer</p>
+          <p class="hover-1-description font-weight-light mb-0 mr-3">
+            <a href=""><i class="fa-brands fa-github fa-xl" style="color: #f4f0f0;"></i></a>
+            <a href="https://instagram.com/yehan__raveesha?igshid=MmVlMjlkMTBhMg=="><i
+                class="fa-brands fa-instagram fa-xl" style="color: #f4f0f0;"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100080512270202&mibextid=zLoPMf"><i
+                class="fa-brands fa-facebook fa-xl" style="color: #f4f0f0;"></i></a>
+          </p>
         </div>
       </div>
     </div>
+
     <!-- DEMO 8 Item-->
-    <div class="col-lg-5">
-      <div class="hover hover-1 text-white rounded"><img src="Card img/safar-safarov-MSN8TFhJ0is-unsplash.jpg" alt="">
+    <div class="col-lg-4">
+      <div class="hover hover-1 text-white rounded"><img src="Card img/chanodya.jpg" alt="">
         <div class="hover-overlay"></div>
         <div class="hover-1-content px-5 py-4">
-          <img class="rounded-circle" src="IMG_E7257.JPG" alt="Generic placeholder image" style="max-width: 70px">
-          <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Image
-            </span>Caption</h3>
-          <p class="hover-1-description font-weight-light mb-0">Lorem ipsum dolor sit amet,
-            consectetur adipisicing elit.</p>
+
+          <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">CHANODYA
+            </span>PRAVEEN</h3>
+          <p class="hover-1-description font-weight-light mb-0">Front end Developer</p>
+          <p class="hover-1-description font-weight-light mb-0 mr-3">
+            <a href=""><i class="fa-brands fa-github fa-xl" style="color: #f4f0f0;"></i></a>
+            <a href="https://instagram.com/chanodyapraveen?utm_source=qr&igshid=MzNlNGNkZWQ4Mg=="><i
+                class="fa-brands fa-instagram fa-xl" style="color: #f4f0f0;"></i></a>
+            <a href="https://www.facebook.com/chanodya.praveen.54?mibextid=ZbWKwL"><i
+                class="fa-brands fa-facebook fa-xl" style="color: #f4f0f0;"></i></a>
+          </p>
         </div>
       </div>
     </div>
@@ -206,35 +300,40 @@
 
   <div class="row">
     <!-- DEMO 9 Item-->
-    <div class="col-lg-5 mb-3 mb-lg-0">
-      <div class="hover hover-1 text-white rounded"><img src="Card img/blake-connally-B3l0g6HLxr8-unsplash.jpg" alt="">
+    <div class="col-lg-4 mb-3 mb-lg-0">
+      <div class="hover hover-1 text-white rounded"><img src="Card img/thamidu.jpeg" alt="">
         <div class="hover-overlay"></div>
         <div class="hover-1-content px-5 py-4">
-          <img class="rounded-circle" src="IMG_E7257.JPG" alt="Generic placeholder image" style="max-width: 70px">
-          <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Image
-            </span>Caption</h3>
-          <p class="hover-1-description font-weight-light mb-0">Lorem ipsum dolor sit amet,
-            consectetur adipisicing elit.</p>
+
+          <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">THAMINDU
+            </span>DHANOJA</h3>
+          <p class="hover-1-description font-weight-light mb-0">Front end Developer</p>
+          <p class="hover-1-description font-weight-light mb-0 mr-3">
+            <a href=""><i class="fa-brands fa-github fa-xl" style="color: #f4f0f0;"></i></a>
+            <a href=""><i class="fa-brands fa-instagram fa-xl" style="color: #f4f0f0;"></i></a>
+            <a href=""><i class="fa-brands fa-facebook fa-xl" style="color: #f4f0f0;"></i></a>
+          </p>
         </div>
       </div>
     </div>
     <!-- DEMO 10 Item-->
-    <div class="col-lg-5">
-      <div class="hover hover-1 text-white rounded"><img src="Card img/fotis-fotopoulos-LJ9KY8pIH3E-unsplash.jpg"
-          alt="">
+    <div class="col-lg-4">
+      <div class="hover hover-1 text-white rounded"><img src="Card img/shiraz.JPG" alt="">
         <div class="hover-overlay"></div>
         <div class="hover-1-content px-5 py-4">
-          <img class="rounded-circle" src="IMG_E7257.JPG" alt="Generic placeholder image" style="max-width: 70px">
-          <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Image
-            </span>Caption</h3>
-          <p class="hover-1-description font-weight-light mb-0">Lorem ipsum dolor sit amet,
-            consectetur adipisicing elit.</p>
+
+          <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">SHIRAZ
+            </span>SAPPIDEEN</h3>
+          <p class="hover-1-description font-weight-light mb-0">Front end Developer</p>
+          <p class="hover-1-description font-weight-light mb-0 mr-3">
+            <a href=""><i class="fa-brands fa-github fa-xl" style="color: #f4f0f0;"></i></a>
+            <a href=""><i class="fa-brands fa-instagram fa-xl" style="color: #f4f0f0;"></i></a>
+            <a href=""><i class="fa-brands fa-facebook fa-xl" style="color: #f4f0f0;"></i></a>
+          </p>
         </div>
       </div>
     </div>
   </div><br>
-
-
 
   <!-- Footer -->
 
@@ -300,8 +399,7 @@
 
   </footer>
 
-
-  <script src="Aboutus.js"></script>
+    <script src="Aboutus.js"></script>
 </body>
 </body>
 
